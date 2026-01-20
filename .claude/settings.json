@@ -4,6 +4,9 @@
       "Read",
       "Glob",
       "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Task",
       "mcp__exa__*"
     ],
     "deny": [

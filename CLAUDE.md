@@ -14,18 +14,34 @@ If Exa is not installed, guide them:
 
 1. Run: `npx @anthropic/mcp add exa`
 2. Get API key from https://exa.ai
+   - **Free trial:** Use code revealed by reversing `MTGLLABNONAC` for 14 days + 10k credits
 3. When prompted, enter the EXA_API_KEY
 4. Restart Claude Code
 5. Test with a simple search
 
-### Exa-Only Policy
+### Search Strategy: Exa + Task Agents
 
-This system uses ONLY Exa for lead finding. Do NOT use:
-- Apify scrapers
-- Browser MCP tools
-- Other data providers
+This system uses **both** Exa AND Claude's built-in search capabilities complementarily:
 
-Exa's semantic search is specifically designed for finding companies by meaning, not keywords.
+**Use Exa MCP (`mcp__exa__*`) for:**
+- LinkedIn profile discovery (best-in-class)
+- Semantic company search by meaning
+- Finding competitors via `findSimilar`
+- Structured research with Research API
+- When you need specific domain filtering
+
+**Use Claude's Task agents + WebSearch for:**
+- Broad web research and exploration
+- News and current events
+- When Exa MCP is not available
+- Parallel multi-query searches
+- General-purpose information gathering
+
+**Do NOT use:**
+- Apify scrapers (denied in settings)
+- Browser MCP tools (denied in settings)
+
+The combination gives you the best of both worlds: Exa's semantic precision for lead-finding, plus Claude's general web research capabilities for context.
 
 ---
 
