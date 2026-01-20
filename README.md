@@ -2,6 +2,27 @@
 
 A Jordan Crawford-style interview system that grills CTOs until they find their ultra-specific niche and builds an Exa.ai targeting strategy.
 
+## Getting Started
+
+1. **Open this folder in Claude Code**
+
+2. **Claude will detect if Exa MCP is installed**
+   - If working: You'll see a confirmation and can proceed
+   - If not: Follow the setup prompts below
+
+3. **If Exa MCP is not installed:**
+   ```bash
+   # Install Exa MCP
+   npx @anthropic/mcp add exa
+   ```
+   - Get your API key from https://exa.ai
+   - Enter the key when prompted
+   - Restart Claude Code
+
+4. **Run `/init` to verify setup**
+
+5. **Once Exa is working, run `/ctox-niche`**
+
 ## What This Does
 
 1. **Grills you like Jordan Crawford** - Aggressive pushback on vague answers

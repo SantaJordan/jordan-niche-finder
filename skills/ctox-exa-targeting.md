@@ -388,6 +388,87 @@ Once you have the columns, the outreach message writes itself:
 - **Targeting:** Healthcare SaaS acquired in last 6 months + hiring integration engineers
 - **Message:** "Saw [Company] was acquired by [Acquirer] in [Month]. You're now hiring integration engineers - that's usually the first sign that merging two tech stacks is getting painful. I help healthcare SaaS companies get through the first 90 days post-acquisition using parallel-run migration..."
 
+## Using Exa via MCP Tools
+
+Claude Code has built-in Exa MCP tools. Use these instead of curl commands.
+
+### web_search_exa
+
+Use for finding companies, people, news:
+
+```
+mcp__exa__web_search_exa
+- query: Search query (required)
+- numResults: Number of results (default: 8)
+- type: "auto", "neural", or "keyword"
+- category: "news", "company", "research paper", etc.
+- includeDomains: Array of domains to include
+- excludeDomains: Array of domains to exclude
+- startPublishedDate: ISO date string
+- endPublishedDate: ISO date string
+```
+
+### Example: Find Companies in Niche
+
+```
+mcp__exa__web_search_exa
+- query: "healthcare SaaS company acquired 2024"
+- numResults: 25
+- type: "neural"
+- category: "news"
+```
+
+### Example: Find LinkedIn Profiles
+
+```
+mcp__exa__web_search_exa
+- query: "CTO [company name] healthcare"
+- numResults: 5
+- includeDomains: ["linkedin.com/in/"]
+```
+
+### Example: Find Job Postings (Pain Signal)
+
+```
+mcp__exa__web_search_exa
+- query: "integration engineer healthcare SaaS hiring"
+- numResults: 20
+- includeDomains: ["linkedin.com/jobs/", "greenhouse.io", "lever.co"]
+```
+
+### find_similar_exa
+
+Use for finding lookalike companies:
+
+```
+mcp__exa__find_similar_exa
+- url: URL of a known good-fit company
+- numResults: Number of similar results
+- excludeDomains: Domains to exclude (like the source)
+```
+
+### Example: Find Similar Companies
+
+```
+mcp__exa__find_similar_exa
+- url: "https://known-customer.com"
+- numResults: 25
+- excludeDomains: ["known-customer.com"]
+```
+
+### get_contents_exa
+
+Use for getting full page content after finding URLs:
+
+```
+mcp__exa__get_contents_exa
+- ids: Array of URLs to get content from
+- text: Include text content (boolean)
+- highlights: Include highlights (boolean)
+```
+
+---
+
 ## Pricing Reference
 
 | Operation | Cost |

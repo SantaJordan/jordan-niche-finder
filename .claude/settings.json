@@ -4,9 +4,11 @@
       "Read",
       "Glob",
       "Grep",
-      "WebFetch",
-      "WebSearch",
       "mcp__exa__*"
+    ],
+    "deny": [
+      "mcp__apify__*",
+      "mcp__browser-mcp__*"
     ]
   }
 }
