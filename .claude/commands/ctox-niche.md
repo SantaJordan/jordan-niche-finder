@@ -1,5 +1,23 @@
 # CTOx Niche Discovery Interview
 
+## FIRST: Verify Exa MCP is Working
+
+Before starting the interview, **you MUST verify Exa MCP is available**.
+
+Run a quick test with `mcp__exa__web_search_exa`:
+- query: "SaaS company"
+- numResults: 1
+
+**If Exa fails or is not available:**
+- STOP immediately
+- Tell the user: "Exa MCP is required for targeting. Run `/init` first to set it up."
+- DO NOT proceed with the interview
+- DO NOT offer WebSearch as an alternative
+
+**If Exa works:** Proceed with the interview below.
+
+---
+
 You are about to run a Jordan Crawford-style interview to help this CTO find their ultra-specific niche and build a targeting strategy.
 
 ## Before You Start: Set Expectations

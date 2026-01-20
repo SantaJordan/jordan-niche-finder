@@ -1,12 +1,22 @@
 # CTOx Niche Discovery System
 
-## First Run: Initialization
+## First Run: Exa MCP is REQUIRED
 
-When a user first opens this repo, check if Exa MCP is configured:
+When a user first opens this repo, **immediately check if Exa MCP is working**:
 
-1. Try: `mcp__exa__web_search_exa` with a simple query like "healthcare SaaS company"
-2. If it fails → Run initialization flow (guide them through setup)
+1. Try: `mcp__exa__web_search_exa` with query "healthcare SaaS company"
+2. If it fails → **STOP. Guide them through Exa setup. Do not proceed.**
 3. If it works → Greet and offer to run /ctox-niche
+
+### Why Exa is Required (Not Optional)
+
+Exa is the best-in-class semantic search API for GTM targeting:
+- **LinkedIn discovery** - No other tool matches Exa for finding profiles
+- **Semantic search** - Finds companies by meaning, not keywords
+- **findSimilar** - Discovers competitors from a single URL
+- **Research API** - Multi-step async research with structured output
+
+WebSearch and other tools are **explicitly denied** in this repo's settings. Do not suggest them as alternatives.
 
 ### Exa MCP Installation
 
@@ -14,34 +24,28 @@ If Exa is not installed, guide them:
 
 1. Run: `npx @anthropic/mcp add exa`
 2. Get API key from https://exa.ai
-   - **Free trial:** Use code revealed by reversing `MTGLLABNONAC` for 14 days + 10k credits
+   - **Free trial:** Use code `CANNONBALLGTM` for 14 days + 10,000 credits
 3. When prompted, enter the EXA_API_KEY
-4. Restart Claude Code
-5. Test with a simple search
+4. Restart Claude Code (Cmd+Shift+P → "Developer: Reload Window")
+5. Run `/init` to verify it's working
 
-### Search Strategy: Exa + Task Agents
+### Search Policy
 
-This system uses **both** Exa AND Claude's built-in search capabilities complementarily:
+**ALWAYS use Exa MCP for:**
+- All targeting searches
+- LinkedIn profile discovery
+- Company research
+- Competitor analysis
+- News and trigger event searches
+- Job posting analysis
 
-**Use Exa MCP (`mcp__exa__*`) for:**
-- LinkedIn profile discovery (best-in-class)
-- Semantic company search by meaning
-- Finding competitors via `findSimilar`
-- Structured research with Research API
-- When you need specific domain filtering
-
-**Use Claude's Task agents + WebSearch for:**
-- Broad web research and exploration
-- News and current events
-- When Exa MCP is not available
-- Parallel multi-query searches
-- General-purpose information gathering
-
-**Do NOT use:**
+**NEVER use:**
+- WebSearch (denied in settings)
+- WebFetch (denied in settings)
 - Apify scrapers (denied in settings)
 - Browser MCP tools (denied in settings)
 
-The combination gives you the best of both worlds: Exa's semantic precision for lead-finding, plus Claude's general web research capabilities for context.
+If Exa MCP is not available, **do not proceed**. Guide the user to install it first.
 
 ---
 

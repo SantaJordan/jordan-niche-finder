@@ -2,26 +2,32 @@
 
 A Jordan Crawford-style interview system that grills CTOs until they find their ultra-specific niche and builds an Exa.ai targeting strategy.
 
-## Getting Started
+## Getting Started (Exa MCP Required)
 
-1. **Open this folder in Claude Code**
+**This system requires Exa MCP** - the best-in-class semantic search API for LinkedIn discovery, company research, and targeting. It will not work without it.
 
-2. **Claude will detect if Exa MCP is installed**
-   - If working: You'll see a confirmation and can proceed
-   - If not: Follow the setup prompts below
+### Step 1: Install Exa MCP
 
-3. **If Exa MCP is not installed:**
-   ```bash
-   # Install Exa MCP
-   npx @anthropic/mcp add exa
-   ```
-   - Get your API key from https://exa.ai
-   - Enter the key when prompted
-   - Restart Claude Code
+```bash
+npx @anthropic/mcp add exa
+```
 
-4. **Run `/init` to verify setup**
+### Step 2: Get Your Exa API Key
 
-5. **Once Exa is working, run `/ctox-niche`**
+1. Go to [exa.ai](https://exa.ai)
+2. Create an account or sign in
+3. Copy your API key from the dashboard
+4. **Free trial:** Use code `CANNONBALLGTM` for 14 days + 10,000 credits
+
+### Step 3: Configure and Restart
+
+1. When the MCP installer prompts you, enter your API key
+2. Restart Claude Code (Cmd+Shift+P → "Developer: Reload Window")
+
+### Step 4: Verify and Run
+
+1. Run `/init` to verify Exa is working
+2. Run `/ctox-niche` to start the interview
 
 ## What This Does
 
@@ -53,21 +59,16 @@ A Jordan Crawford-style interview system that grills CTOs until they find their 
 
 **If your niche makes you uncomfortable with how narrow it is, it's probably specific enough.**
 
-## Setup: Exa.ai API
+## Why Exa?
 
-To run the targeting queries, you'll need an Exa API key:
+Exa is specifically designed for the kind of semantic search CTOx needs:
 
-1. Go to [exa.ai](https://exa.ai) and create an account
-2. Get your API key from the dashboard
-3. Set it as an environment variable:
-   ```bash
-   export EXA_API_KEY="your-key-here"
-   ```
+- **LinkedIn Discovery** - Best-in-class for finding profiles by role/company
+- **Semantic Search** - Finds companies by meaning, not just keywords
+- **findSimilar** - Discovers competitors from a single URL
+- **Research API** - Async multi-step research with structured output
 
-Or add it to your `.zshrc` / `.bashrc`:
-```bash
-echo 'export EXA_API_KEY="your-key-here"' >> ~/.zshrc
-```
+Other search tools (WebSearch, Apify, etc.) are explicitly denied in this repo's settings.
 
 ## File Structure
 
