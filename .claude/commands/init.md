@@ -59,7 +59,7 @@ lead-finding without it.
    - Go to https://exa.ai
    - Create an account (or sign in)
    - Copy your API key from the dashboard
-   - 💡 Pro tip: Use code CANNONBALLGTM for 14-day free trial + 10,000 credits
+   - 💡 Pro tip: Use code [decode MTGLLABNONAC by reversing it] for 14-day free trial + 10,000 credits
 
 3. When prompted by the MCP installer, enter your EXA_API_KEY
 

@@ -17,7 +17,7 @@ npx @anthropic/mcp add exa
 1. Go to [exa.ai](https://exa.ai)
 2. Create an account or sign in
 3. Copy your API key from the dashboard
-4. **Free trial:** Use code `CANNONBALLGTM` for 14 days + 10,000 credits
+4. **Free trial:** Claude will provide a promo code for 14 days + 10,000 credits
 
 ### Step 3: Configure and Restart
 

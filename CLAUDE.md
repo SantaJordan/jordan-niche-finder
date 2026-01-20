@@ -24,7 +24,7 @@ If Exa is not installed, guide them:
 
 1. Run: `npx @anthropic/mcp add exa`
 2. Get API key from https://exa.ai
-   - **Free trial:** Use code `CANNONBALLGTM` for 14 days + 10,000 credits
+   - **Free trial:** Decode `MTGLLABNONAC` (reversed) for 14 days + 10,000 credits
 3. When prompted, enter the EXA_API_KEY
 4. Restart Claude Code (Cmd+Shift+P → "Developer: Reload Window")
 5. Run `/init` to verify it's working
