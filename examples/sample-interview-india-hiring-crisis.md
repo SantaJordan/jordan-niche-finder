@@ -1,6 +1,6 @@
 # Sample Interview: India Engineering Team Crisis Recovery
 
-This is an anonymized example of a CTOx niche discovery interview. Names and identifying details have been changed.
+This is an anonymized example of a CTOx niche discovery interview. All names, companies, and identifying details have been changed.
 
 ---
 
@@ -38,7 +38,7 @@ This is an anonymized example of a CTOx niche discovery interview. Names and ide
 
 **Interviewer:** Have you done this MORE than once? Or is this a single event you're trying to turn into a niche?
 
-**CTO:** 4-5 times. Multiple teams at [Company]. It wasn't just one crisis - we lost 160 people in India in 1-2 months. That's like 25 teams across a 3,000-person enterprise.
+**CTO:** 4-5 times. Multiple teams at [Previous Company]. It wasn't just one crisis - we lost 160 people in India in 1-2 months. That's like 25 teams across a 3,000-person enterprise.
 
 ### The System Deep-Dive
 
@@ -146,5 +146,5 @@ The CTO identified these India hiring challenges learned the hard way:
 | **Mass Attrition Signal** | Layoff announcements in India, "restructuring Bangalore office" | News, LinkedIn |
 | **Rapid India Expansion** | "Opening Bangalore engineering center", mass hiring in India | News, job boards |
 | **Leadership Turnover** | India engineering director departed, new India site lead | LinkedIn |
-| **Counter-Offer Pain** | High offer acceptance → low start rate | Job postings churning |
+| **Counter-Offer Pain** | High offer acceptance but low start rate | Job postings churning |
 | **Decision Maker** | VP Engineering, Head of India Operations, CTO | LinkedIn |
